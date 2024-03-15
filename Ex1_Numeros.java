@@ -15,21 +15,10 @@ public class Ex1_Numeros {
         return resultado;
     }
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        int n1 = 0;
-        int n2 = 0;
-        int n3 = 0;
-
+    private static void validarNumeros (int n1, int n2, int n3)
+    {
         int menor = 0;
-        double media = 0;
         String resultado = null;
-
-        System.out.println("Informe três numeros: ");
-        n1 = input.nextInt();
-        n2 = input.nextInt();
-        n3 = input.nextInt();
 
         if (n1 > n2 && n1 > n3)
         {
@@ -61,6 +50,21 @@ public class Ex1_Numeros {
 
         if (resultado != null)
             System.out.printf(resultado);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n1 = 0;
+        int n2 = 0;
+        int n3 = 0;
+
+        System.out.println("Informe três numeros: ");
+        n1 = input.nextInt();
+        n2 = input.nextInt();
+        n3 = input.nextInt();
+
+        validarNumeros (n1, n2, n3);
 
         System.out.printf("\nA média entre %d, %d, %d eh %.2f\n", n1, n2, n3, mediaTresNumeros(n1, n2, n3));
 
